@@ -196,6 +196,11 @@ body {
   width: 100%;
   font-size: 1.6rem;
 }
+.body h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.8rem;
+}
 .body .leftBody {
   width: 30%;
   padding: 0 1%;
