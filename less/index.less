@@ -71,8 +71,6 @@ html, body {
 		height: 100%;
 		font-size: 62.5%;
 		font-family: @main-font;
-	
-
 }
 
 
@@ -95,36 +93,46 @@ html, body {
 	border-bottom: 1px solid black;
 	background: @header-color;
 	padding: 20px 0 20px 0;
-}
 
-.header left {
-	display: flex;
-	flex-direction: column;
-	padding: 20px 2px 20px 20px;
+	.left {
+		display: flex;
+		flex-direction: column;
+		padding: 20px 2px 20px 20px;
+
+		.name h1 {
+			font-size: 3rem;
+
+			h3 {
+				font-size: 2.5rem;
+			} // closing h3
+
+		} // closing name
+
+		
+		
+	} // closing left
+
+
+	.right {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: right;
 	
-}
+	} // closing right
+	
+	 a {
+		color: black;
+		text-decoration: none;
+		font-size: 1.6rem;
+	}
+	
 
-.header .left .name h1 {
-	font-size: 3rem;
-}
 
-.header .left .name h3 {
-	font-size: 2.5rem;
-}
+} // closing .header
 
-.header right {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: right;
 
-}
 
-.header a {
-	color: black;
-	text-decoration: none;
-	font-size: 1.6rem;
-}
 
 // container .body .leftBody (skills, etc)
 
