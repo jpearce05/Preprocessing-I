@@ -16,6 +16,20 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v13/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-NfNUAw.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('IBM Plex Sans'), local('IBMPlexSans'), url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYXgKVElMYYaJe8bpLHnCwDKtdY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'), url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYX9KVElMYYaJe8bpLHnCwDKjWr7MIY.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -143,34 +157,38 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html,
 body {
   height: 100%;
   font-size: 62.5%;
-  font-family: 'EB Garamond', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   font-size: 1.6rem;
 }
 .header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
-  border-bottom: 1px solid black;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #000000;
   background: #FF4647;
-  padding: 20px 0 20px 0;
 }
 .header .left {
   display: flex;
   flex-direction: column;
   padding: 20px 2px 20px 20px;
+  margin: 0;
 }
 .header .left .name h1 {
-  font-size: 3rem;
+  font-size: 6rem;
+  color: #fdfdfd;
+  padding-bottom: 10px;
 }
 .header .left .name h1 h3 {
   font-size: 2.5rem;
@@ -179,76 +197,101 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: right;
+  align-items: top;
+  padding-top: 8px;
+  padding-right: 20px;
+  margin: 0px;
 }
 .header a {
   color: black;
   text-decoration: none;
   font-size: 1.6rem;
 }
+.header a:hover {
+  color: #fdfdfd;
+}
 .body {
-  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 20px;
-  border-bottom: 1px solid black;
-  padding: 10px 0 10px 0;
+  border: 1px solid black;
   width: 100%;
   font-size: 1.6rem;
+  margin-bottom: 0px;
+  display: flex;
+  line-height: 1.5;
+  position: relative;
+}
+@media (max-width: 500px) {
+  .body {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .body h3 {
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 0.8rem;
+  padding-bottom: 6px;
 }
 .body .leftBody {
   width: 30%;
-  padding: 0 1%;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
   font-size: 1.6rem;
-  background: #222F3E;
+  background: #082548;
   color: white;
+  margin: 0px;
+}
+@media (max-width: 500px) {
+  .body .leftBody {
+    flex-direction: column;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .body .leftBody .skills {
-  padding: 0 1%;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
 }
 .body .leftBody .tools {
-  padding: 0 1%;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
 }
 .body .leftBody .education {
-  padding: 0 1%;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
 }
 .body .mainBody {
-  width: 60%;
+  width: 70%;
   padding: 0 1%;
-  padding-bottom: 5px;
   font-size: 1.6rem;
-  background: #FDFDFD;
+  background: #fdfdfd;
   color: black;
+  margin: 0px;
 }
 .body .mainBody .summary {
-  padding: 0 1%;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.body .mainBody .summary p {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.2em;
 }
 .body .mainBody .experience1 {
   padding: 0 1%;
   padding-bottom: 5px;
-  margin-bottom: 10px;
 }
 .body .mainBody .experience2 {
   padding: 0 1%;
   padding-bottom: 5px;
-  margin-bottom: 10px;
 }
 .body .mainBody .experience3 {
   padding: 0 1%;
   padding-bottom: 5px;
-  margin-bottom: 10px;
 }
