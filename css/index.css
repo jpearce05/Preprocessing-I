@@ -167,9 +167,10 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   font-size: 1.6rem;
+  height: 100%;
 }
 .header {
   display: flex;
@@ -210,9 +211,14 @@ body {
 .header a:hover {
   color: #fdfdfd;
 }
-.body {
+.contentOuter {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  height: 100%;
+}
+.contentOuter .content {
+  flex-direction: row;
   border: 1px solid black;
   width: 100%;
   font-size: 1.6rem;
@@ -222,17 +228,17 @@ body {
   position: relative;
 }
 @media (max-width: 500px) {
-  .body {
+  .contentOuter .content {
     flex-direction: column;
     align-items: center;
   }
 }
-.body h3 {
+.contentOuter .content h3 {
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 6px;
 }
-.body .leftBody {
+.contentOuter .content .leftBody {
   width: 30%;
   padding-top: 10px;
   padding-left: 20px;
@@ -242,7 +248,7 @@ body {
   margin: 0px;
 }
 @media (max-width: 500px) {
-  .body .leftBody {
+  .contentOuter .content .leftBody {
     flex-direction: column;
     width: 80%;
     display: flex;
@@ -250,19 +256,19 @@ body {
     align-items: center;
   }
 }
-.body .leftBody .skills {
+.contentOuter .content .leftBody .skills {
   padding-bottom: 10px;
   margin-bottom: 0px;
 }
-.body .leftBody .tools {
+.contentOuter .content .leftBody .tools {
   padding-bottom: 10px;
   margin-bottom: 0px;
 }
-.body .leftBody .education {
+.contentOuter .content .leftBody .education {
   padding-bottom: 10px;
   margin-bottom: 0px;
 }
-.body .mainBody {
+.contentOuter .content .mainBody {
   width: 70%;
   padding: 0 1%;
   font-size: 1.6rem;
@@ -270,12 +276,12 @@ body {
   color: black;
   margin: 0px;
 }
-.body .mainBody .summary {
+.contentOuter .content .mainBody .summary {
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.body .mainBody .summary p {
+.contentOuter .content .mainBody .summary p {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -283,15 +289,15 @@ body {
   padding-bottom: 10px;
   line-height: 1.2em;
 }
-.body .mainBody .experience1 {
+.contentOuter .content .mainBody .experience1 {
   padding: 0 1%;
   padding-bottom: 5px;
 }
-.body .mainBody .experience2 {
+.contentOuter .content .mainBody .experience2 {
   padding: 0 1%;
   padding-bottom: 5px;
 }
-.body .mainBody .experience3 {
+.contentOuter .content .mainBody .experience3 {
   padding: 0 1%;
   padding-bottom: 5px;
 }
