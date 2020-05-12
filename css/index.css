@@ -1,1 +1,303 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v13/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-2fRUAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v13/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-NfNUAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('IBM Plex Sans'), local('IBMPlexSans'), url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYXgKVElMYYaJe8bpLHnCwDKtdY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'), url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYX9KVElMYYaJe8bpLHnCwDKjWr7MIY.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  height: 100%;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #000000;
+  background: #FF4647;
+}
+.header .left {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 2px 20px 20px;
+  margin: 0;
+}
+.header .left .name h1 {
+  font-size: 6rem;
+  color: #fdfdfd;
+  padding-bottom: 10px;
+}
+.header .left .name h1 h3 {
+  font-size: 2.5rem;
+}
+.header .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  padding-top: 8px;
+  padding-right: 20px;
+  margin: 0px;
+}
+.header a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.header a:hover {
+  color: #fdfdfd;
+}
+.contentOuter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.contentOuter .content {
+  flex-direction: row;
+  border: 1px solid black;
+  width: 100%;
+  font-size: 1.6rem;
+  margin-bottom: 0px;
+  display: flex;
+  line-height: 1.5;
+  position: relative;
+}
+@media (max-width: 500px) {
+  .contentOuter .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contentOuter .content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+.contentOuter .content .leftBody {
+  width: 30%;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 1.6rem;
+  background: #082548;
+  color: white;
+  margin: 0px;
+}
+@media (max-width: 500px) {
+  .contentOuter .content .leftBody {
+    flex-direction: column;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contentOuter .content .leftBody .skills {
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.contentOuter .content .leftBody .tools {
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.contentOuter .content .leftBody .education {
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.contentOuter .content .mainBody {
+  width: 70%;
+  padding: 0 1%;
+  font-size: 1.6rem;
+  background: #fdfdfd;
+  color: black;
+  margin: 0px;
+}
+.contentOuter .content .mainBody .summary {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.contentOuter .content .mainBody .summary p {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.2em;
+}
+.contentOuter .content .mainBody .experience1 {
+  padding: 0 1%;
+  padding-bottom: 5px;
+}
+.contentOuter .content .mainBody .experience2 {
+  padding: 0 1%;
+  padding-bottom: 5px;
+}
+.contentOuter .content .mainBody .experience3 {
+  padding: 0 1%;
+  padding-bottom: 5px;
+}
